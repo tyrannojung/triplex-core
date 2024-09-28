@@ -29,11 +29,11 @@ yarn hardhat compile
 
 4. Deploy the contracts:
 
- To deploy on Sepolia:
+    To deploy on Sepolia:
 ```
 yarn deploy sepolia
 ```
- To deploy on Arbitrum Sepolia:
+    To deploy on Arbitrum Sepolia:
 ```
 yarn deploy arbitrumSepolia
 ```

@@ -25,9 +25,6 @@ const config: HardhatUserConfig = {
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },
-  paths: {
-    sources: "./contracts/P256/solady/src",
-  },
 };
 
 export default config;

@@ -5,11 +5,11 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import "../core/BaseAccount.sol";
-import "../samples/callback/TokenCallbackHandler.sol";
+import "../utils/core/BaseAccount.sol";
+import "../secp256k1/callback/TokenCallbackHandler.sol";
 import { WebAuthn256r1 } from "./WebAuthn256r1.sol";
 
-contract FIDOAccount2 is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable {
+contract Secp256r1Account is BaseAccount, TokenCallbackHandler, UUPSUpgradeable, Initializable {
     using ECDSA for bytes32;
 
     uint256[2] public public_key_coordinates;

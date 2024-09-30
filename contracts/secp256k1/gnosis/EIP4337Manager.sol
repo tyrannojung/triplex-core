@@ -10,8 +10,8 @@ import "@gnosis.pm/safe-contracts/contracts/GnosisSafe.sol";
 import "@gnosis.pm/safe-contracts/contracts/base/Executor.sol";
 import "@gnosis.pm/safe-contracts/contracts/examples/libraries/GnosisSafeStorage.sol";
 import "./EIP4337Fallback.sol";
-import "../../interfaces/IAccount.sol";
-import "../../interfaces/IEntryPoint.sol";
+import "../../utils/interfaces/IAccount.sol";
+import "../../utils/interfaces/IEntryPoint.sol";
 import "../../utils/Exec.sol";
 
     using ECDSA for bytes32;

@@ -2,10 +2,10 @@
 pragma solidity ^0.8.12;
 
 import { ECDSA } from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import { BasePaymaster } from "../core/BasePaymaster.sol";
-import { _packValidationData } from "../core/Helpers.sol";
-import { IEntryPoint } from "../interfaces/IEntryPoint.sol";
-import { UserOperation } from "../interfaces/UserOperation.sol";
+import { BasePaymaster } from "../utils/core/BasePaymaster.sol";
+import { _packValidationData } from "../utils/core/Helpers.sol";
+import { IEntryPoint } from "../utils/interfaces/IEntryPoint.sol";
+import { UserOperation } from "../utils/interfaces/UserOperation.sol";
 import { GasLessUserOperation, GasLessUserOperationLib } from "./GasLessUserOperation.sol";
 
 contract Paymaster is BasePaymaster {
@@ -48,8 +48,8 @@ contract Paymaster is BasePaymaster {
      */
     function _validatePaymasterUserOp(
         UserOperation calldata userOp,
-        bytes32 userOpHash,
-        uint256 requiredPreFund
+        bytes32 ,
+        uint256 
     )
         internal
         virtual
@@ -86,7 +86,7 @@ contract Paymaster is BasePaymaster {
      */
     function _postOp(PostOpMode mode, bytes calldata context, uint256 actualGasCost) internal override {
         if (mode != PostOpMode.postOpReverted) {
-            (UserOperation memory userOp, PaymasterAndData memory paymasterAndData) =
+            (UserOperation memory userOp, /* PaymasterAndData memory _paymasterAndData */) =
                 abi.decode(context, (UserOperation, PaymasterAndData));
             emit UserOperationSponsored(userOp.sender, actualGasCost);
         }

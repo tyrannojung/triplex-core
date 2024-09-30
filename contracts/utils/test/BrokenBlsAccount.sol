@@ -6,8 +6,8 @@ pragma solidity ^0.8.12;
 import "@openzeppelin/contracts/utils/Create2.sol";
 import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
-import "../samples/SimpleAccount.sol";
-import "../samples/bls/IBLSAccount.sol";
+import "../../secp256k1/SimpleAccount.sol";
+import "../../secp256k1/bls/IBLSAccount.sol";
 
 /**
  * for testing: a BLS account that fails to return its public-key (completely ignores its publickey)

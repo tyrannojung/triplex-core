@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.12 <0.9.0;
 
-import { FCL_Elliptic_ZZ } from "./secp256r1.sol";
+import { FCL_Elliptic_ZZ } from "./FclEllipticZZ.sol";
 import { Base64 } from "solady/src/utils/Base64.sol";
 
 /// @title WebAuthn256r1
